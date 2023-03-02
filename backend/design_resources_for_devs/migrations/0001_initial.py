@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Resource',
             fields=[
-                ('resource_id', models.AutoField(primary_key=True, serialize=False)),
+                ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('name', models.CharField(max_length=150, verbose_name='Name')),
                 ('desc', models.TextField(verbose_name='Description')),
                 ('link', models.URLField(verbose_name='Link')),
