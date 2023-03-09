@@ -1,0 +1,115 @@
+.header-container {
+  width: 1408px;
+  height: 652px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+  background-image: url('./assets/headerbackground copy.jpg');
+  background-size: cover;
+  filter: drop-shadow(5px 5px 8px rgba(43, 43, 43, 0.6));
+
+  & header {
+    padding: 2rem 8rem 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+
+    & h1 {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+
+      & .line1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+        scale: 1.15;
+
+        & .design {
+          background: #fed420;
+          display: inline-grid;
+          height: 80px;
+          padding-inline: 1.5px;
+          transform: translateY(-3px);
+          box-shadow: 0 0 6px 0 #fed420;
+
+          & span {
+            align-self: center;
+            color: #ffffff;
+            font-family: 'Stem-ExtraLight', sans-serif;
+            font-size: 5.5rem;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+        }
+
+        & .resources {
+          font-size: 7rem;
+          font-family: 'Blowbrush Regular', cursive;
+          background-color: transparent;
+          background-image: linear-gradient(
+            to bottom,
+            #ff3ae1 8%,
+            #ff252e 43%,
+            #fe8a00 55%
+          );
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: relative;
+
+          &::after {
+            z-index: -1;
+            background: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: attr(data-text);
+            text-shadow: -1px -3px 0px #ff3ae1, 3px 3px 0px #a0ff01;
+            /* transition: all 0.3s ease-in-out; */
+          }
+        }
+
+        & .for {
+          font-size: 5rem;
+          font-family: 'GiddyupStd', cursive;
+          color: #f736dd;
+          filter: drop-shadow(4px 2px 3px #f736dd80);
+          translate: -3px -8px;
+        }
+      }
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    & p {
+      font-size: 1.75rem;
+      text-align: center;
+      color: #000000;
+      padding-inline: 2rem;
+      margin: 0 auto;
+      line-height: 1.125;
+    }
+  }
+}
