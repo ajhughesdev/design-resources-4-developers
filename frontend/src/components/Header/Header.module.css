@@ -1,0 +1,114 @@
+.header {
+  background: url('./../../assets/headerbackground.jpg') no-repeat;
+  background-size: 100% 100%;
+  filter: drop-shadow(5px 5px 8px rgb(36, 36, 36, 0.6));
+  border-radius: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 1.25rem;
+
+  @media (min-width: 1440px) {
+    /* padding: 9rem 8rem; */
+  }
+
+  & .mobile {
+    display: flex;
+    flex-direction: column;
+
+    & h1 {
+      display: flex;
+      flex-direction: column;
+
+      & .desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        & .design {
+          background-color: rgb(254, 212, 32);
+          box-shadow: 0 0 3.5px 0 rgb(254, 212, 32);
+          display: flex;
+          margin: 0 auto;
+
+          & span {
+            margin-block: -3px;
+            place-items: center;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-family: 'Stem-ExtraLight', sans-serif;
+            font-size: 2.75rem;
+            translate: 0 3px;
+            padding-inline: 2px;
+            line-height: 1;
+          }
+        }
+
+        & .resources {
+          & span {
+            font-size: 3.8875rem;
+            font-family: 'Blowbrush Regular', cursive;
+            background: linear-gradient(
+                to bottom,
+                rgb(255, 58, 225) 8%,
+                rgb(255, 37, 46) 43%,
+                rgb(254, 138, 0) 55%
+              )
+              no-repeat;
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            margin: 0;
+            place-self: center;
+
+            &::after {
+              z-index: -1;
+              background: none;
+              position: absolute;
+              left: 0;
+              top: 0;
+              content: attr(data-text);
+              text-shadow: -0.03595rem -0.1078rem 0 rgb(255, 58, 225),
+                0.1078rem 0.1078rem 0 rgb(162, 255, 0);
+            }
+          }
+        }
+      }
+
+      & .for {
+        margin-block: -15px 0;
+        font-size: 2rem;
+        font-family: GiddyupStd, cursive;
+        color: rgb(247, 54, 221);
+        filter: drop-shadow(2px 2px 0.5rem rgb(247, 54, 221));
+      }
+    }
+
+    & img {
+      margin: 0 auto;
+      height: 2.5rem;
+    }
+  }
+
+  & p {
+    display: none;
+    font-family: 'CarmenSans-Thin', sans-serif !important;
+    font-size: 0.6rem;
+    color: var(--primary-text);
+    line-height: 1.25;
+    letter-spacing: -0.375px;
+    margin: 0.25rem 0 0;
+    border-radius: 8px;
+  }
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--primary-text);
+  line-height: 1.25;
+  letter-spacing: -0.375px;
+  margin: 1.25rem 0 0;
+}

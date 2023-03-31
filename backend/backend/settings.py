@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +56,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'resourcesdb',
+        'NAME': 'resourcesdbfinal',
         'USER': os.environ.get('PGUSERNAME'),
         'PASSWORD': os.environ.get('PGPASSWORD'),
     }
@@ -109,10 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# White listing the localhost:3000 port
+# White listing the localhost:5173 port
 # for React
 CORS_ORIGIN_WHITELIST = (
-	'http://localhost:3000',
+	'http://localhost:5173',
 )
 
 # Internationalization
@@ -120,7 +120,7 @@ CORS_ORIGIN_WHITELIST = (
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Kentucky/Louisville'
 
 USE_I18N = True
 
@@ -136,4 +136,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

@@ -136,3 +136,4 @@ resourceresults.jl
 resources.db
 
 postgres/
+node_modules/
