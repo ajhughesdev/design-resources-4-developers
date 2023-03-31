@@ -1,5 +1,5 @@
 import css from './resourceCard.module.css'
-import defaultImage from './../../code.svg'
+import defaultImage from './../../assets/code.svg'
 
 interface ResourceCardProps {
   name: string
