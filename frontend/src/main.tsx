@@ -6,7 +6,6 @@ import RootLayout from './RootLayout'
 import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 import Category from './pages/Category'
-import Resource from './Resource'
 import About from './pages/About'
 
 import './index.css'
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: ':category', element: <Category /> },
-      { path: 'resources/:id', element: <Resource /> },
       { path: 'about', element: <About /> },
     ],
   },
