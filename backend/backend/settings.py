@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'resources',
+        'NAME': 'resourcesdbfinal',
         'USER': os.environ.get('PGUSERNAME'),
         'PASSWORD': os.environ.get('PGPASSWORD'),
     }
@@ -120,7 +120,7 @@ CORS_ORIGIN_WHITELIST = (
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Kentucky/Louisville'
 
 USE_I18N = True
 
@@ -136,4 +136,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

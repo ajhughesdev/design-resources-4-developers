@@ -1,53 +1,51 @@
-.container {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: auto 90rem auto;
-  grid-template-areas: '. content .';
-  place-self: center center;
+.header {
+  background: url('./../../assets/headerbackground.jpg') no-repeat;
+  background-size: 100% 100%;
+  filter: drop-shadow(5px 5px 8px rgb(36, 36, 36, 0.6));
+  border-radius: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 1.25rem;
 
-  & header {
-    grid-area: content;
-    background: url('./../../assets/headerbackground.jpg') no-repeat;
-    background-size: cover;
-    filter: drop-shadow(0.3125rem 0.3125rem 0.5rem rgb(36 36 36 / 0.6));
-    margin: auto;
-    padding: 9rem 8rem;
-    width: 86.875rem;
-    height: 41.25rem;
-    border-radius: 2.5rem;
+  @media (min-width: 1440px) {
+    /* padding: 9rem 8rem; */
+  }
+
+  & .mobile {
+    display: flex;
+    flex-direction: column;
 
     & h1 {
       display: flex;
       flex-direction: column;
 
-      & .top-line {
+      & .desktop {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
+        flex-direction: column;
+        gap: 0.25rem;
 
         & .design {
-          background: rgb(254, 212, 32);
-          display: grid;
-          height: 5rem;
-          box-shadow: 0 0 0.4313rem 0 rgb(254, 212, 32);
+          background-color: rgb(254, 212, 32);
+          box-shadow: 0 0 3.5px 0 rgb(254, 212, 32);
+          display: flex;
+          margin: 0 auto;
 
           & span {
-            align-self: center;
+            margin-block: -3px;
+            place-items: center;
             color: rgb(255, 255, 255);
-            font-family: 'Stem-ExtraLight', sans-serif;
-            font-size: 5.5rem;
             text-transform: uppercase;
-            translate: 0 0.125rem;
+            font-family: 'Stem-ExtraLight', sans-serif;
+            font-size: 2.75rem;
+            translate: 0 3px;
+            padding-inline: 2px;
             line-height: 1;
           }
         }
 
-        .resources-container {
-          translate: 0 10px;
-          & .resources {
-            font-size: 7.775rem;
+        & .resources {
+          & span {
+            font-size: 3.8875rem;
             font-family: 'Blowbrush Regular', cursive;
             background: linear-gradient(
                 to bottom,
@@ -61,6 +59,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
+            margin: 0;
             place-self: center;
 
             &::after {
@@ -70,36 +69,46 @@
               left: 0;
               top: 0;
               content: attr(data-text);
-              text-shadow: -0.0719rem -0.2156rem 0 rgb(255, 58, 225),
-                0.2156rem 0.2156rem 0 rgb(162, 255, 0);
+              text-shadow: -0.03595rem -0.1078rem 0 rgb(255, 58, 225),
+                0.1078rem 0.1078rem 0 rgb(162, 255, 0);
             }
           }
         }
+      }
 
-        & .for {
-          font-size: 5.75rem;
-          font-family: 'GiddyupStd', cursive;
-          color: rgb(247, 54, 221);
-          filter: drop-shadow(
-            0.2875rem 0.1437rem 0.2156rem rgba(247, 54, 221, 0.502)
-          );
-        }
+      & .for {
+        margin-block: -15px 0;
+        font-size: 2rem;
+        font-family: GiddyupStd, cursive;
+        color: rgb(247, 54, 221);
+        filter: drop-shadow(2px 2px 0.5rem rgb(247, 54, 221));
       }
     }
 
     & img {
-      margin: 0.7rem 0;
-      width: 100%;
-    }
-
-    & p {
-      font-size: 1.75rem;
-      text-align: center;
-      color: rgb(36 36 36);
-      padding: 1.1rem 1.6rem;
       margin: 0 auto;
-      line-height: 1.25;
-      letter-spacing: -0.75px;
+      height: 2.5rem;
     }
   }
+
+  & p {
+    display: none;
+    font-family: 'CarmenSans-Thin', sans-serif !important;
+    font-size: 0.6rem;
+    color: var(--primary-text);
+    line-height: 1.25;
+    letter-spacing: -0.375px;
+    margin: 0.25rem 0 0;
+    border-radius: 8px;
+  }
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--primary-text);
+  line-height: 1.25;
+  letter-spacing: -0.375px;
+  margin: 1.25rem 0 0;
 }
