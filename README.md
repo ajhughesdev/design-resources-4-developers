@@ -60,4 +60,4 @@ I used Django to create a website and React to render the data.
 
 > "Write markdown cells in Jupyter explaining your thought process and code."
 
-See attached [Jupyter Notebook](https://github.com/ajhughesdev/design-resources-4-developers/blob/0c1895198226a567e2dc5693269f2e70b25025a8/backend/design-resources-4-developers.ipynb).
+Please see attached [Jupyter Notebook](https://github.com/ajhughesdev/design-resources-4-developers/blob/0c1895198226a567e2dc5693269f2e70b25025a8/backend/design-resources-4-developers.ipynb) to follow my process!
