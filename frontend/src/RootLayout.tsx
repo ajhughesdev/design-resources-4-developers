@@ -12,12 +12,12 @@ const RootLayout = () => {
   const navigate = useNavigate()
   const [categories, setCategories] = useState<Category[]>([])
   const [category, setCategory] = useState('')
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     const fetchCategories = async () => {
       const response = await axios.get('http://127.0.0.1:8000/api/categories/')
       setCategories(response.data)
-      console.log(categories)
     }
     fetchCategories()
   }, [])
@@ -31,18 +31,26 @@ const RootLayout = () => {
   }
 
   return (
-    <div className="app dark">
+    <div className={`app ${theme}`}>
       <Header />
       <nav>
         <ul>
-          <li>
-            <Link to='/'>Home</Link>
+          <li className='home-btn'>
+            <Link to='/' className='button'>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to='about'>About</Link>
+            <Link to='about' className='button'>
+              About
+            </Link>
           </li>
         </ul>
-        <select onChange={handleChange} value={category}>
+        <select
+          onChange={handleChange}
+          value={category}
+          className='category-select'
+        >
           <option value=''>Select a category</option>
           {categories.map((item) => (
             <option key={item.category} value={item.category}>

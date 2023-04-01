@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'resourcesdbfinal',
+        'NAME': 'resourcesdb',
         'USER': os.environ.get('PGUSERNAME'),
         'PASSWORD': os.environ.get('PGPASSWORD'),
     }
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # White listing the localhost:5173 port
 # for React
 CORS_ORIGIN_WHITELIST = (
-	'http://localhost:5173',
+    'http://localhost:5173',
 )
 
 # Internationalization

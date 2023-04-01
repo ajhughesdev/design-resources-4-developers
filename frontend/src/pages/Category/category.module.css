@@ -1,3 +1,49 @@
+.resources {
+  position: sticky;
+  top: 80px;
+    /* scale: 1 */
+  text-align: center;
+  padding: 0 0 0.5rem;
+  width: 100%;
+
+  margin: 0;
+  z-index: 5;
+  background-color: var(--primary-bg);
+
+  & span {
+    word-break: break-all;
+    word-wrap: wrap;
+    font-size: 3rem;
+    font-family: 'Blowbrush Regular', cursive;
+    background: linear-gradient(
+        to bottom,
+        rgb(255, 58, 225) 8%,
+        rgb(255, 37, 46) 43%,
+        rgb(254, 138, 0) 55%
+      )
+      no-repeat;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    margin: 0;
+    place-self: center;
+    
+    
+    &::after {
+      z-index: -1;
+      background: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(data-text);
+      text-shadow: -0.03595rem -0.1078rem 0 rgb(255, 58, 225),
+        0.1078rem 0.1078rem 0 rgb(162, 255, 0);
+    }
+  }
+}
+
 .container {
   margin: 0 auto;
   max-width: 1152px;

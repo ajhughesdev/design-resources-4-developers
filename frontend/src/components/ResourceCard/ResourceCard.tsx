@@ -6,6 +6,7 @@ interface ResourceCardProps {
   link: string
   description: string
   category: string
+  key: number
 }
 
 const ResourceCard = ({
@@ -13,6 +14,7 @@ const ResourceCard = ({
   link,
   description,
   category,
+  key
 }: ResourceCardProps): JSX.Element => {
   const primaryImageSrc = `https://logo.clearbit.com/${
     link
@@ -34,7 +36,7 @@ const ResourceCard = ({
       <span className={css.resource}>
         <article className={css['resource-card']}>
           {category !== 'Chrome Extensions' && (
-            <div className={css.icon}>
+            <div className={css.icon} key={key}>
               <img
                 src={primaryImageSrc}
                 alt='logo'

@@ -5,7 +5,7 @@
   border-radius: 2.5rem;
   text-align: center;
   padding: 1rem;
-  margin: 2rem 1.25rem;
+  margin: 2rem 1.25rem 0;
 
   @media (min-width: 1440px) {
     /* padding: 9rem 8rem; */
@@ -105,10 +105,11 @@
 
 p {
   font-family: sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
   color: var(--primary-text);
   line-height: 1.25;
   letter-spacing: -0.375px;
-  margin: 1.25rem 0 0;
+  margin: 1.25rem 2rem .5rem;
+  max-width: 370px;
 }

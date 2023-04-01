@@ -30,18 +30,19 @@ const Category = (): JSX.Element => {
 
   return (
     <>
-      <h2>{categoryParam}</h2>
+      <h2 className={css.resources}>
+        <span data-text={categoryParam}>{categoryParam}</span>
+      </h2>
       <div className={css.container}>
         <div className={css.items}>
           {resourceList.map((item) => (
-
-              <ResourceCard
-                name={item.name}
-                link={item.link}
-                description={item.description}
-                category={item.category_name}
-              />
-     
+            <ResourceCard
+              key={item.id}
+              name={item.name}
+              link={item.link}
+              description={item.description}
+              category={item.category_name}
+            />
           ))}
         </div>
       </div>
