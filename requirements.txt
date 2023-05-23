@@ -15,7 +15,7 @@ cssselect==1.2.0
 cycler==0.11.0
 debugpy==1.6.6
 decorator==5.1.1
-Django==4.1.7
+Django==4.1.9
 django-cors-headers==3.14.0
 djangorestframework==3.14.0
 executing==1.2.0
