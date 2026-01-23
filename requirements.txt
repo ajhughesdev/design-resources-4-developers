@@ -19,7 +19,7 @@ Django==4.1.13
 django-cors-headers==3.14.0
 djangorestframework==3.14.0
 executing==1.2.0
-filelock==3.10.7
+filelock==3.20.3
 fonttools==4.43.0
 hyperlink==21.0.0
 idna==3.4
